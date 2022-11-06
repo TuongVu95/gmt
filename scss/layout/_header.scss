@@ -1,48 +1,12 @@
+$bg-header: #EE4A91;
 .header{
-    background: #0A2C36;
-    padding-bottom: 24px;
-    &__inner{
-        > .row{
-            align-items: center;
-            justify-content: space-between;
-            margin: 0;
-        }
-        .col-auto{
-            padding: 0;
-        }
+    background-color: $bg-header;
+    padding: 16px 0;
+    .rs-row{
+        align-items: center;
     }
-    &__logo{
-        a{
-            display: block;
-            max-width: 126px;
-        }
-    }
-}
-.nav{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    &__item{
-        &-link{
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-        }
-        .nav-text{
-            color: #FDFDFD;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 100%;
-        }
-        &.active{
-            background: #E5BD89;
-            border-radius: 4px;
-            .nav-text{
-                color: #0A2C36;
-                font-weight: 700;
-            }
-        }
-
+    .logo{
+        display: block;
+        max-width: 152px;
     }
 }

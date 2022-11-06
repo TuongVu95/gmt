@@ -1,0 +1,20 @@
+{
+  "name": "gmt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass scss/main.scss css/style.css -w --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuongVu95/gmt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TuongVu95/gmt/issues"
+  },
+  "homepage": "https://github.com/TuongVu95/gmt#readme"
+}
