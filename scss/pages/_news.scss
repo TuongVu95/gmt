@@ -23,17 +23,30 @@
                 border: 1px solid #CBD1D6;
                 border-radius: 6px;
                 padding: 9px 16px;
+                @media (max-width: 992px) {
+                    border-radius: 100px;
+                    padding: 6px 14px;
+                }
             }
             span {
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 100%;
                 color: #444B52;
+                @media (max-width: 992px) {
+                    font-size: 14px;
+                }
             }
             i {
                 font-size: 16px;
                 margin-left: 4px;
                 color: #939CA3;
+                @media (max-width: 992px) {
+                    font-size: 14px;
+                }
+            }
+            @media(max-width: 992px) {
+                margin-top: 4px;
             }
         }
         @media(max-width: 992px) {
