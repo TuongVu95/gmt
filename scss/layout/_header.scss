@@ -2,6 +2,9 @@ $bg-header: #EE4A91;
 .header{
     background-color: $bg-header;
     padding: 16px 0;
+    position: sticky;
+    top: -1px;
+    z-index: 100;
     .rs-row{
         align-items: center;
     }
