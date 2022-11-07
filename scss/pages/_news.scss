@@ -1,0 +1,112 @@
+.news-page {
+    background: #EAEAEA;
+    .rs-card {
+        border-radius: 6px;
+        box-shadow: none;
+        padding: 16px;
+        .card-title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            color: #444B52;
+            margin-bottom: 24px;
+        }
+        .card-btn {
+            text-align: center;
+            .btn {
+                border: 1px solid #CBD1D6;
+                border-radius: 6px;
+                padding: 9px 16px;
+            }
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 100%;
+                color: #444B52;
+            }
+            i {
+                font-size: 16px;
+                margin-left: 4px;
+                color: #939CA3;
+            }
+        }
+    }
+    .list {
+        &__item {
+            display: flex;
+            margin-bottom: 24px;
+            &-img {
+                max-width: 276px;
+                margin-right: 16px;
+                img {
+                    border-radius: 6px;
+                }
+            }
+            &-desc {
+                flex: 1;
+                .tit {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #32373D;
+                    margin-bottom: 4px;
+                }
+                .desc {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #444B52;
+                    margin-bottom: 4px;
+                }
+                .time {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #6A737A;
+                }
+            }
+        }
+    }
+    .recommand {
+        .title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: #32373D;
+            margin-bottom: 8px;
+        }
+        .list__news {
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+                img {
+                    border-radius: 6px;
+                }
+                .tit {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #32373D;
+                    margin-top: 8px;
+                }
+                .desc {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #32373D;
+                    margin-top: 8px;
+                }
+            }
+        }
+        
+    }
+}
