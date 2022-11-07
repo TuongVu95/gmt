@@ -37,6 +37,7 @@
     font-size: 36px;
     line-height: 48px;
     color: $gray-800;
+    font-family: 'Inter', Roboto, Arial;
 }
 .line-normal {
     display: block;
@@ -58,16 +59,19 @@
         font-weight: 700;
         font-size: 48px;
         line-height: 100%;
+        font-family: 'Inter', Roboto, Arial;
     }
     &-tit {
         font-weight: 700;
         font-size: 20px;
         line-height: 28px;
+        font-family: 'Inter', Roboto, Arial;
     }
     &-normal {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
+        font-family: 'Inter', Roboto, Arial;
     }
 }
 .pagination {
@@ -204,6 +208,21 @@
         }
         &-item{
             margin-top: 32px;
+        }
+    }
+}
+.section-news{
+    .block-line{
+        margin: 24px 0;
+    }
+    .news{
+        .item{
+            &-picture{
+                margin-bottom: 16px;
+            }
+            &-name{
+                margin-bottom: 12px;
+            }
         }
     }
 }
