@@ -20,12 +20,41 @@
         @include bg("../images/home/banner4.webp");
     }
 }
-.carousel{
-    &-next{
+.carousel {
+    &-next {
         right: calc(914px / 2 - 262px);
     }
-    &-prev{
-
+    &-prev {
+    }
+}
+.section-tit {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: $gray-800;
+}
+.line-normal {
+    display: block;
+    background: linear-gradient(90deg, #072d94 0%, #54228d 14.29%, #790d80 28.57%, #940071 42.86%, #a7005f 57.14%, #b4004c 71.43%, #bb1239 85.71%, #bc3026 100%);
+    border-radius: 1000px;
+    width: 120px;
+    height: 4px;
+}
+.para {
+    &-head {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 100%;
+    }
+    &-tit {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+    }
+    &-normal {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
     }
 }
 .pagination {
@@ -55,12 +84,45 @@
             height: 24px;
             opacity: 1;
             background: $white;
-            &:not(:last-child){
+            &:not(:last-child) {
                 margin-right: 32px;
             }
-            &-active{
-                background: linear-gradient(90deg, #072D94 0%, #54228D 14.29%, #790D80 28.57%, #940071 42.86%, #A7005F 57.14%, #B4004C 71.43%, #BB1239 85.71%, #BC3026 100%), #FFFFFF;
+            &-active {
+                background: linear-gradient(90deg, #072d94 0%, #54228d 14.29%, #790d80 28.57%, #940071 42.86%, #a7005f 57.14%, #b4004c 71.43%, #bb1239 85.71%, #bc3026 100%),
+                    #ffffff;
             }
+        }
+    }
+}
+.section-introduce{
+    .row{
+        margin: 0;
+    }
+    .rs-col{
+        &-left{
+            max-width: 500px;
+            width: 100%;
+            padding: 0;
+        }
+        &-right{
+            flex: 1;
+            padding-left: 24px;
+            padding: 44px 0 0 24px;
+        }
+    }
+    .para {
+        &-head {
+
+        }
+        &-tit {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &-normal {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
         }
     }
 }
