@@ -192,3 +192,18 @@
         margin-top: 60px;
     }
 }
+.section-gallery{
+    .section-tit{
+        margin-bottom: 32px;
+    }
+    .gallery{
+        &-list{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        &-item{
+            margin-top: 32px;
+        }
+    }
+}
