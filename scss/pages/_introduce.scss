@@ -1,0 +1,79 @@
+.introduce-page {
+    .section-page {
+        padding: 0;
+    }
+    .section-banner {
+        background: url(../images/introduce/banner.png) no-repeat center;
+        background-size: cover;
+        padding: 183px 0 152px;
+        background-attachment: fixed;
+        .card {
+            max-width: 808px;
+            margin: auto;
+            padding: 87px 32px;
+        }
+        .para-tit {
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 100%;
+            color: #0a2c36;
+            margin-bottom: 32px;
+        }
+        .para-normal {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 120%;
+            color: #0a2c36;
+        }
+    }
+    .section-system {
+        padding-top: 32px;
+        .section-tit {
+            margin-bottom: 10px;
+        }
+        .block-img,
+        .block-para {
+            margin-top: 32px;
+        }
+    }
+    .section-vision {
+        background: #f2f2f2;
+        padding: 64px 0 33px;
+        .section-tit {
+            margin-bottom: 0;
+        }
+        .para-normal {
+            color: #444b52;
+        }
+        .block-line {
+            margin: 24px 0;
+        }
+        .section-head {
+            margin-bottom: 32px;
+        }
+        .item {
+            display: block;
+            text-align: center;
+            background: #FFFFFF;
+            padding-bottom: 57px;
+            &-picture {
+                margin-bottom: 24px;
+            }
+            &-info{
+                padding: 0 22.67px;
+            }
+            &-name {
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 100%;
+                margin-bottom: 16px;
+            }
+        }
+        .news-list {
+            margin: 0 -24px;
+        }
+        .news-item{
+            padding: 0 24px;
+        }
+    }
+}
