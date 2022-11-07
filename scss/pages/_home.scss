@@ -1,10 +1,20 @@
 @mixin bg($url, $size: cover) {
-    background: url(../images/home/banner1.webp) no-repeat center;
+    background: url($url) no-repeat center;
     background-size: $size;
 }
-.section-page{
-    &:not(.section-banner){
+.home-page{
+    .section-body{
+        @include bg('../images/home/bg-content.png');
+        background-size: 100% 100%;
+        padding-top: 48px;
+    }
+}
+.section-page {
+    &:not(.section-banner) {
         padding: 24px 0;
+    }
+    &-spacing{
+        margin-bottom: 64px;
     }
 }
 .section-banner {
@@ -29,15 +39,13 @@
     &-next {
         right: calc(914px / 2 - 262px);
     }
-    &-prev {
-    }
 }
 .section-tit {
     font-weight: 700;
     font-size: 36px;
     line-height: 48px;
     color: $gray-800;
-    font-family: 'Inter', Roboto, Arial;
+    font-family: "Inter", Roboto, Arial;
 }
 .line-normal {
     display: block;
@@ -59,19 +67,19 @@
         font-weight: 700;
         font-size: 48px;
         line-height: 100%;
-        font-family: 'Inter', Roboto, Arial;
+        font-family: "Inter", Roboto, Arial;
     }
     &-tit {
         font-weight: 700;
         font-size: 20px;
         line-height: 28px;
-        font-family: 'Inter', Roboto, Arial;
+        font-family: "Inter", Roboto, Arial;
     }
     &-normal {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
-        font-family: 'Inter', Roboto, Arial;
+        font-family: "Inter", Roboto, Arial;
     }
 }
 .pagination {
@@ -112,7 +120,7 @@
     }
 }
 .section-introduce {
-    padding: 72px 0 24px;
+
     .row {
         margin: 0;
     }
@@ -128,17 +136,49 @@
             padding: 44px 0 0 24px;
         }
     }
-    .para {
-        &-head {
-            color: #333333;
+    .content{
+        .para {
+            &-head {
+                color: #333333;
+            }
+            &-normal {
+                color: #4f4f4f;
+            }
         }
-        &-normal {
-            color: #4f4f4f;
-            margin-bottom: 65px;
-        }
+    }
+    .block-btn{
+        margin-top: 65px;
     }
     .line-normal {
         margin: 16px auto;
+    }
+    @include respond-to('md'){
+        .rs-col {
+            &-left {
+                max-width: 100%;
+            }
+            &-right {
+                flex: 1;
+                padding-left: 0;
+                padding: 44px 0 0 24px;
+            }
+        }
+        .content{
+            .para {
+                &-head {
+                    color: #333333;
+                }
+                &-normal {
+                    color: #4f4f4f;
+                }
+            }
+        }
+        .block-btn{
+            margin-top: 65px;
+        }
+        .line-normal {
+            margin: 16px auto;
+        }
     }
 }
 
@@ -161,16 +201,16 @@
     }
 }
 .section-coffee {
-    .row{
+    .row {
         margin: 0;
     }
-    .rs-col{
+    .rs-col {
         padding: 0;
-        &-left{
+        &-left {
             flex: 1;
             padding-right: 10px;
         }
-        &-right{
+        &-right {
             max-width: 767px;
             width: 100%;
             flex: 1 767px;
@@ -192,37 +232,59 @@
     .timer {
         margin-top: 8px;
     }
-    .block-btn{
+    .block-btn {
         margin-top: 60px;
     }
 }
-.section-gallery{
-    .section-tit{
+.section-gallery {
+    .section-tit {
         margin-bottom: 32px;
     }
-    .gallery{
-        &-list{
+    .gallery {
+        &-list {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
         }
-        &-item{
+        &-item {
             margin-top: 32px;
         }
     }
 }
-.section-news{
-    .block-line{
+.section-news {
+    padding: 48px 0 !important;
+    .block-line {
         margin: 24px 0;
     }
-    .news{
-        .item{
-            &-picture{
+    .news {
+        .item {
+            &-picture {
                 margin-bottom: 16px;
             }
-            &-name{
+            &-name {
                 margin-bottom: 12px;
             }
         }
+    }
+    .timer {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #939ca3;
+        margin-top: 8px;
+    }
+}
+.section-story {
+    @include bg("../images/home/bg-story.png");
+    padding: 65px 0 !important;
+    .row{
+        align-items: center;
+    }
+    .card{
+        padding: 48px 24px;
+    }
+    .block-btn{
+        margin-top: 40px;
     }
 }

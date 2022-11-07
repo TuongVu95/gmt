@@ -7,7 +7,11 @@
         &:not(:last-child){
             margin-right: 16px;
         }
-
+        @include respond-to('md'){
+            &:not(:last-child){
+                display: none;
+            }
+        }
     }
     &-link {
         display: inline-flex;
