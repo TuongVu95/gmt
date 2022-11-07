@@ -2,6 +2,11 @@
     background: url(../images/home/banner1.webp) no-repeat center;
     background-size: $size;
 }
+.section-page{
+    &:not(.section-banner){
+        padding: 24px 0;
+    }
+}
 .section-banner {
     position: relative;
     .swiper-slide {
@@ -39,6 +44,14 @@
     border-radius: 1000px;
     width: 120px;
     height: 4px;
+}
+.block-para {
+    .timer {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #939ca3;
+    }
 }
 .para {
     &-head {
@@ -94,17 +107,18 @@
         }
     }
 }
-.section-introduce{
-    .row{
+.section-introduce {
+    padding: 72px 0 24px;
+    .row {
         margin: 0;
     }
-    .rs-col{
-        &-left{
+    .rs-col {
+        &-left {
             max-width: 500px;
             width: 100%;
             padding: 0;
         }
-        &-right{
+        &-right {
             flex: 1;
             padding-left: 24px;
             padding: 44px 0 0 24px;
@@ -112,17 +126,69 @@
     }
     .para {
         &-head {
-
-        }
-        &-tit {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 28px;
+            color: #333333;
         }
         &-normal {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
+            color: #4f4f4f;
+            margin-bottom: 65px;
         }
+    }
+    .line-normal {
+        margin: 16px auto;
+    }
+}
+
+.block-btn {
+    .btn {
+        width: 176px;
+        height: 40px;
+        border: 1px solid #828282;
+        border-radius: 4px;
+        span {
+            color: #4f4f4f;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 100%;
+        }
+        &-ic {
+            margin-left: 10px;
+            font-style: 14px;
+        }
+    }
+}
+.section-coffee {
+    .row{
+        margin: 0;
+    }
+    .rs-col{
+        padding: 0;
+        &-left{
+            flex: 1;
+            padding-right: 10px;
+        }
+        &-right{
+            max-width: 767px;
+            width: 100%;
+            flex: 1 767px;
+            margin-left: 24px;
+        }
+    }
+    .block-line {
+        margin: 32px 0;
+    }
+    .para {
+        &-tit {
+            color: #32373d;
+            margin-bottom: 12px;
+        }
+        &-normal {
+            color: #444b52;
+        }
+    }
+    .timer {
+        margin-top: 8px;
+    }
+    .block-btn{
+        margin-top: 60px;
     }
 }
