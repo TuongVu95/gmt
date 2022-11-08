@@ -57,4 +57,5 @@ const pageIntroduce = () => {
 const init = function () {
   pageHome();
   fnTabs();
+  pageIntroduce();
 }();

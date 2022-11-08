@@ -59,7 +59,23 @@
             }
         }
     }
-
+    .section-picture{
+        .section-tit{
+            margin-bottom: 24px;
+        }
+        .slide-box{
+            margin-top: 48px;
+            position: relative;
+        }
+        .carousel{
+            &-next{
+                right: -8px;
+            }
+            &-prev{
+                left: 0;
+            }
+        }
+    }
     .section-water {
         @include respond-to("md") {
             margin-bottom: 48px;
