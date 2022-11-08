@@ -1,13 +1,19 @@
 .footer {
     background: #ee4a91;
-    box-shadow: inset 0px -1px 0px #e1e3e5;
+    // box-shadow: inset 0px -1px 0px #e1e3e5;
     padding: 48px 0;
+    @include respond-to("md") {
+        padding: 24px 0;
+    }
     // display: none;
     &__inner {
         .row {
             justify-content: space-between;
             margin: 0;
             flex-wrap: nowrap;
+            @include respond-to("md") {
+                flex-wrap: wrap;
+            }
         }
         .col-auto {
             padding: 0;
@@ -25,7 +31,25 @@
             &:last-child {
                 flex: 1;
             }
+            @include respond-to("md") {
+                padding: 0 !important;
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+                &:first-child {
+                    max-width: 100%;
+                    width: 100%;
+                }
+                &:nth-child(2) {
+                    max-width: 100%;
+                    width: 100%;
+                }
+                &:last-child {
+                    flex: 1;
+                }
+            }
         }
+
     }
     .info-company {
         .tit {
@@ -34,6 +58,14 @@
             line-height: 35px;
             color: $white;
             margin-bottom: 16px;
+        }
+        @include respond-to("md") {
+            margin-top: 16px;
+            .tit {
+                font-size: 20px;
+                line-height: 23px;
+                max-width: 280px;
+            }
         }
     }
 }
@@ -50,7 +82,7 @@
         font-size: 16px;
         line-height: 19px;
         text-align: justify;
-        color: #32373D;
+        color: #32373d;
 
         background: #f3f3f3;
         border: 1px solid #939ca3;
@@ -76,6 +108,15 @@
         outline: none;
         padding: 0;
     }
+    @include respond-to('md'){
+        .form-group{
+            max-width: 340px;
+    width: 100%;
+        }
+        .form-input{
+            width: 100%;
+        }
+    }
 }
 .list {
     &-item {
@@ -99,6 +140,25 @@
             color: #ffffff;
         }
     }
+    @include respond-to("md") {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+            .icon {
+                width: 18px;
+                margin-right: 8px;
+            }
+            .content {
+                flex: 1;
+
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #ffffff;
+            }
+        }
+    }
 }
 
 .logo-footer {
@@ -107,5 +167,41 @@
     align-items: center;
     picture {
         max-width: 160px;
+    }
+    @include respond-to("md") {
+        margin-top: 16px;
+        justify-content: center;
+        picture {
+            max-width: 152px;
+        }
+    }
+}
+.footer-small {
+    padding: 16px 0 24px;
+    background: #000000;
+    box-shadow: inset 0px -1px 0px #e1e3e5;
+    text-align: center;
+    .para-normal {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 35px;
+
+        color: #ffffff;
+        margin-bottom: 16px;
+    }
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-item {
+            max-width: 32px;
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+        }
+    }
+    @include respond-to("md") {
+        .para-normal {
+        }
     }
 }
