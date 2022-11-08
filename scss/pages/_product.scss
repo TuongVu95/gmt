@@ -1,0 +1,161 @@
+.product-page {
+    .section-banner {
+        @include bg("../images/product/bg-banner.png");
+        padding: 12px 0;
+        @include respond-to('md'){
+            padding: 48px 0 80px;
+            .card{
+                padding: 25px;
+                max-width: 340px;
+                margin: auto;
+                &-wrap{
+                    text-align: center;
+                }
+                .para-normal{
+                    margin-top: 16px;
+                }
+                .desc{
+                    font-weight: 700;
+                    color: #161E61;
+                }
+                .sub-desc{
+                    display: block;
+                }
+            }
+            .rs-col{
+                &-left{
+                    margin-bottom: 24px;
+                }
+            }
+            .img-wrap{
+                picture{
+                    max-width: 340px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    .section-product {
+        padding-top: 64px !important;
+        .section-tit {
+            background: $black;
+            border-radius: 0px 0px 6px 6px;
+
+            max-width: 508px;
+            height: 80px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .para-normal {
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 100%;
+                color: #ffffff;
+            }
+        }
+        .section-box {
+            border: 1px solid #161e61;
+            border-radius: 24px;
+        }
+        .rs-row {
+            padding: 0 36px 23px;
+            margin: 0 -24px;
+        }
+        .rs-col {
+            margin-top: 48px;
+            padding: 0 24px;
+        }
+        .product {
+            background: #e0e0e0;
+            border-radius: 1000px 1000px 24px 24px;
+            padding-bottom: 24px;
+            &-picture {
+                margin-bottom: 22px;
+            }
+            &-info {
+                padding: 0 12px;
+            }
+            &-name {
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 100%;
+                color: #333;
+                margin-bottom: 16px;
+            }
+            &-desc {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+                color: #4f4f4f;
+                max-width: 314px;
+                margin: auto;
+            }
+        }
+        @include respond-to('md'){
+            .section-tit {
+                max-width: 226px;
+                height: 42px;
+                margin: auto;
+                .para-normal {
+                    font-size: 20px;
+                }
+            }
+            .rs-col {
+                margin-top: 24px;
+                padding: 0;
+            }
+            .product {
+                padding-bottom: 11px;
+                max-width: 480px;
+                margin: auto;
+                &-picture {
+                    margin-bottom: 26px;
+                }
+                &-name {
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                }
+                &-desc {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .section-gallery {
+        .section-tit {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    box-shadow: inset 0px 2px 4px rgba(4, 4, 4, 0.15);
+    border-radius: 6px;
+    padding: 6px 4px;
+    // justify-content: space-between;
+    &-item {
+        padding: 6px 12px;
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+    }
+    &-name {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #6a737a;
+    }
+    &-active {
+        background: #ae064f;
+        box-shadow: 0px 1px 4px rgba(10, 10, 10, 0.15);
+        border-radius: 4px;
+        * {
+            color: $white;
+        }
+    }
+}
