@@ -102,6 +102,10 @@
                     font-size: 20px;
                 }
             }
+            .rs-row {
+                padding: 0 8px 14px;
+                margin: 0 0;
+            }
             .rs-col {
                 margin-top: 24px;
                 padding: 0;
@@ -112,6 +116,9 @@
                 margin: auto;
                 &-picture {
                     margin-bottom: 26px;
+                }
+                &-info{
+                    padding-bottom: 16px;
                 }
                 &-name {
                     font-size: 18px;
@@ -126,6 +133,20 @@
     .section-gallery {
         .section-tit {
             margin-bottom: 16px;
+        }
+        .section-head{
+            position: relative;
+        }
+        @include respond-to('md'){
+            .block-line{
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+            .line-normal{
+                height: 64px;
+                width: 2px;
+            }
         }
     }
 }
