@@ -1,7 +1,6 @@
 @mixin bg($url, $size: cover) {
     background: url($url) no-repeat center;
     background-size: $size;
-
 }
 .home-page {
     .section-body {
@@ -10,13 +9,34 @@
         padding-top: 48px;
         background-attachment: fixed;
     }
+    @include respond-to("md") {
+        .block-line {
+            position: absolute;
+            left: 0;
+            top: 0;
+            .line-normal {
+                height: 190px;
+                width: 2px;
+                margin: 0;
+            }
+        }
+    }
 }
 .section-page {
+    position: relative;
     &:not(.section-banner) {
         padding: 24px 0;
     }
     &-spacing {
         margin-bottom: 64px;
+    }
+    @include respond-to('md'){
+        &:not(.section-banner) {
+            padding: 16px 0;
+        }
+        &-spacing {
+            margin-bottom: 32px;
+        }
     }
 }
 .section-banner {
@@ -36,17 +56,29 @@
     .slide4 {
         @include bg("../images/home/banner4.webp");
     }
+    @include respond-to("md") {
+        .card {
+            margin: 0 10px;
+            padding: 32px 12px;
+        }
+        .swiper-slide {
+            padding: 220px 0 176px;
+        }
+    }
 }
-.group-carousel{
+.group-carousel {
     max-width: 914px;
     margin: auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     z-index: 1;
+    @include respond-to("md") {
+        display: none;
+    }
 }
 .carousel {
     display: inline-flex;
@@ -71,17 +103,18 @@
     * {
         font-size: 14px;
     }
-    &-next,&-prev{
+    &-next,
+    &-prev {
         top: 53%;
     }
     &-next {
         // right: calc(914px / 2 - 262px);
         right: -20px;
-        .ic-angle-right{
+        .ic-angle-right {
             margin-right: -4px;
         }
     }
-    &-prev{
+    &-prev {
         left: -20px;
     }
 }
@@ -91,6 +124,10 @@
     line-height: 48px;
     color: $gray-800;
     font-family: "Inter", Roboto, Arial;
+    @include respond-to("md") {
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
 .line-normal {
     display: block;
@@ -125,6 +162,22 @@
         font-size: 18px;
         line-height: 28px;
         font-family: "Inter", Roboto, Arial;
+    }
+    @include respond-to("md") {
+        &-head {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        &-tit {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            font-family: "Inter", Roboto, Arial;
+        }
+        &-normal {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 }
 .pagination {
@@ -163,6 +216,20 @@
             }
         }
     }
+    @include respond-to("md") {
+        &-wrap {
+            padding: 0 6px;
+        }
+        .swiper-pagination {
+            &-bullet {
+                width: 9px;
+                height: 9px;
+                &:not(:last-child) {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
 }
 .section-introduce {
     .row {
@@ -197,31 +264,30 @@
         margin: 16px auto;
     }
     @include respond-to("md") {
+        padding: 0 !important;
         .rs-col {
             &-left {
                 max-width: 100%;
+                order: 2;
             }
             &-right {
                 flex: 1;
-                padding-left: 0;
-                padding: 44px 0 0 24px;
+                padding: 0;
+
+                order: 1;
+                position: relative;
+                margin-bottom: 32px;
             }
         }
-        .content {
-            .para {
-                &-head {
-                    color: #333333;
-                }
-                &-normal {
-                    color: #4f4f4f;
-                }
-            }
+        .block-para {
+            text-align: left;
+            padding-left: 16px;
         }
         .block-btn {
-            margin-top: 65px;
+            margin-top: 32px;
         }
-        .line-normal {
-            margin: 16px auto;
+        .para-head {
+            margin-bottom: 8px;
         }
     }
 }
@@ -241,6 +307,19 @@
         &-ic {
             margin-left: 10px;
             font-style: 14px;
+        }
+    }
+    @include respond-to('md'){
+        .btn {
+            width: 127px;
+height: 30px;
+            span {
+                font-size: 14px;
+            }
+            &-ic {
+                margin-left: 10px;
+                font-style: 14px;
+            }
         }
     }
 }
@@ -278,6 +357,37 @@
     }
     .block-btn {
         margin-top: 60px;
+    }
+    @include respond-to('md'){
+       .block-line{
+           left: 10px;
+           top: 16px;
+           margin: 0;
+       }
+        .section-tit{
+           padding-left: 16px;
+       }
+       .rs-col {
+        padding: 0;
+        &-left {
+            flex: 1;
+            padding-left: 16px;
+        }
+        &-right {
+            max-width: 100%;
+            flex: 1 100%;
+            margin-left: 0;
+        }
+    }
+       .section-tit,.para-tit, .para-normal{
+           margin-bottom: 8px;
+       }
+       .block-btn{
+           margin-top: 32px;
+       }
+       .block-para{
+           padding-bottom: 16px;
+       }
     }
 }
 .section-gallery {
@@ -337,20 +447,20 @@
     .card {
         padding: 48px 24px;
     }
-    .section-tit{
+    .section-tit {
         text-align: center;
         margin-bottom: 16px;
     }
     .block-btn {
         margin-top: 40px;
     }
-    .rs-col{
-        &-left{
+    .rs-col {
+        &-left {
             max-width: 406px;
             width: 100%;
             padding-left: 31px;
         }
-        &-right{
+        &-right {
             flex: 1;
             padding-left: 36px;
             padding-right: 31px;
