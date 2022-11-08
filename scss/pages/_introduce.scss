@@ -59,26 +59,77 @@
             }
         }
     }
-    .section-picture{
-        .section-tit{
+    .section-picture {
+        .section-tit {
             margin-bottom: 24px;
         }
-        .slide-box{
+        .slide-box {
             margin-top: 48px;
             position: relative;
+            padding: 0 24px;
         }
-        .carousel{
-            &-next{
-                right: -8px;
+        .carousel {
+            top: 45%;
+            &-next {
+                right: 0;
             }
-            &-prev{
+            &-prev {
                 left: 0;
+            }
+        }
+        .item {
+            &-img {
+               box-shadow: 1px 1px 11px 0px $black-70;
+                    border-radius: 12px;
+                    max-height: 230px;
+                    overflow: hidden;
+            }
+            &-tit {
+                margin-top: 24px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 120%;
+                color: #161e61;
+            }
+        }
+        @include respond-to('md'){
+            margin-bottom: 0;
+            padding: 48px 0;
+            .slide-box{
+                padding: 0;
+                margin-top: 0;
+            }
+            .section-tit{
+                margin-bottom: 0;
+            }
+            .swiper-wrapper{
+                flex-wrap: wrap;
+                margin: 0 -8px;
+                width: auto;
+            }
+            .swiper-slide{
+                max-width: calc(100% / 2);
+                margin-top: 32px;
+                padding: 0 8px;
+            }
+            .carousel {
+                display: none;
+            }
+            .item {
+                &-img {
+                   box-shadow: none;
+                }
+                &-tit {
+                    margin-top: 12px;
+                    font-size: 16px;
+                }
             }
         }
     }
     .section-water {
         @include respond-to("md") {
             margin-bottom: 48px;
+            padding-top: 48px;
             .section-tit {
                 padding: 16px 0 16px 16px;
             }
@@ -158,10 +209,10 @@
         }
         @include respond-to("md") {
             padding: 32px 0;
-            .section-head{
+            .section-head {
                 margin-bottom: 24px;
             }
-            .section-tit{
+            .section-tit {
                 padding-left: 0;
             }
             .block-line {

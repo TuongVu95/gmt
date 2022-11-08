@@ -1,3 +1,5 @@
+var browser = $(window), browserWidth =  browser.width(),
+    $desktop = browserWidth > 992, $mobile = browserWidth < 992,
 const pageHome = () => {
   const navMobile = $('.nav-mb');
   const navClose = $('.js-nav-close'), mask = $('.js-mask');
@@ -38,7 +40,7 @@ const fnTabs = () => {
 }
 
 const pageIntroduce = () => {
-
+  if($desktop){
   var swiper = new Swiper(".js-swiper-picture", {
     slidesPerView: 4,
     spaceBetween: 32,
@@ -52,6 +54,7 @@ const pageIntroduce = () => {
       prevEl: ".swiper-button-prev",
     },
   });
+}
 }
 
 const init = function () {
