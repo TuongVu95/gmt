@@ -26,6 +26,19 @@
         }
     }
 }
+@include respond-to("md") {
+    .block-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        .line-normal {
+            height: 190px;
+            width: 2px;
+            margin: 0;
+            background: linear-gradient(0deg, #072d94 45%, #54228d 23.71%, #790d80 70.57%, #940071 42.86%, #a7005f 86.14%, #b4004c 10.43%, #bb1239 85.71%, #bc3026 100%);
+        }
+    }
+}
 .section-page {
     position: relative;
     &:not(.section-banner) {

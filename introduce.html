@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="copyright" content="CTY GMT"/>
+    <meta name="author" content="CTY GMT"/>
+            <meta name="robots" content="INDEX,FOLLOW">
+        <meta property="og:locale" content="vi_VN">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CTY GMT">
+    <title>GMT</title>
+    <link rel="shortcut icon" href="images/logo.png"/>
+    <link rel="canonical" href="https://nhathuoclongchau.com">
 
     <link rel="stylesheet" href="css/libs/swiper.min.css">
     <link rel="stylesheet" href="css/libs/lightgallery.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="js/libs/jquery-3.1.0.min.js"></script>
     <script src="js/libs/swiper.min.js"></script>
 </head>
 
@@ -18,28 +27,32 @@
     <header class="header">
         <div class="container">
             <div class="row rs-row">
-                <div class="col-4">
-                    <h1 class="logo">
-                        <a href="/" class="">
-                            <picture>
-                                <source media="(max-width: 992px)" srcset="">
-                                <img src="images/logo.png" alt="GMT">
-                            </picture>
-                        </a>
-                    </h1>
+                <div class="col-4 col-rs">
+                    <div class="menu-mb">
+                        <div class="menu-mb-ic js-menu-mb">
+                            <i class="ic-menu"></i>
+                        </div>
+                        <h1 class="logo">
+                            <a href="/" class="">
+                                <picture>
+                                    <source media="(max-width: 992px)" srcset="">
+                                    <img src="images/logo.png" alt="GMT">
+                                </picture>
+                            </a>
+                        </h1>
+                    </div>
                 </div>
-                <div class="col-8">
-                    <div class="nav">
+                <div class="col-8 col-rs">
+                    <div class="nav nav-mb-inner">
                         <ul class="nav-list">
                             <li class="nav-item">
-                                <a href="/" class="nav-link nav-active">TRANG CHỦ</a>
+                                <a href="/" class="nav-link ">TRANG CHỦ</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/introduce.html" class="nav-link nav-active">GIỚI THIỆU</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/product.html
-                                " class="nav-link">SẢN PHẨM</a>
+                                <a href="/product.html" class="nav-link">SẢN PHẨM</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/news.html" class="nav-link">TIN TỨC</a>
@@ -48,7 +61,8 @@
                                 <a href="/contact.html" class="nav-link ">LIÊN HỆ</a>
                             </li>
                             <li class="nav-item">
-                                <a href="tel:(+84)909667003" class="hotline btn btn-black">
+                                <a href="tel:(+84)909667003" class="hotline btn btn-black hotline-mb">
+                                    <span class="name-mb">Hotline</span>
                                     <i class="ic-call m-r-8"></i>
                                     <span>(+84) 9 09 667 00 3</span>
                                 </a>
@@ -57,6 +71,54 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="nav-mb">
+            <div class="nav-mb-wrap">
+                <div class="nav-mb-head">
+                    <div class="nav-mb-logo">
+                        <a href="/" class="">
+                            <picture>
+                                <source media="(max-width: 992px)" srcset="">
+                                <img src="images/logo.png" alt="GMT">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="nav-mb-icon js-nav-close">
+                        <i class="ic-close"></i>
+                    </div>
+                </div>
+                <div class="nav-mb-body">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link ">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/introduce.html" class="nav-link nav-active">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/product.html" class="nav-link">SẢN PHẨM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/news.html" class="nav-link">TIN TỨC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact.html" class="nav-link ">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-mb-foot">
+                    <a href="tel:(+84)909667003" class="hotline">
+                        <div class="hotline-ic">
+                            <i class="ic-call-center"></i>
+                        </div>
+                        <div class="hotline-info">
+                            <span class="number">(+84) 9 09 667 00 3</span>
+                            <span class="name">Hotline</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-mask js-nav-close"></div>
         </div>
     </header>
     <main class="page-wrapper introduce-page">
@@ -85,13 +147,87 @@
                 </p>
                <div class="block-img">
                 <picture>
-                    <img src="images/introduce/section2.png" alt="gmt">
+                    <source media="(max-width: 480px)" srcset="images/introduce/section2-mb.png">
+                        <img src="images/introduce/section2.png" alt="gmt">
                 </picture>
                </div>
             </div>
         </section>
 
-        <section class="section-page section-system section-page-spacing">
+        <section class="section-page section-picture section-page-spacing">
+            <div class="container">
+                <h2 class="section-tit">
+                    MỘT SỐ HÌNH ẢNH CỦA SẢN PHẨM
+                </h2>
+                <p class="block-line">
+                    <span class="line-normal"></span>
+                </p>
+                <div class="slide-box">
+                    <div class="swiper js-swiper-picture">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="item">
+                            <div class="item-img">
+                              <img src="images/introduce/" alt="">
+                            </div>
+                            <div class="item-name txt-center">
+                              <p class="item-tit">Sữa rửa mặt</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="item">
+                            <div class="item-img">
+                              <img src="images/home/demo-s4.png" alt="">
+                            </div>
+                            <div class="item-name txt-center">
+                              <p class="item-tit">Sữa rửa mặt</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="item">
+                            <div class="item-img">
+                              <img src="images/home/demo-s4.png" alt="">
+                            </div>
+                            <div class="item-name txt-center">
+                              <p class="item-tit">Sữa rửa mặt</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="item">
+                            <div class="item-img">
+                              <img src="images/home/demo-s4.png" alt="">
+                            </div>
+                            <div class="item-name txt-center">
+                              <p class="item-tit">Sữa rửa mặt</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="item">
+                            <div class="item-img">
+                              <img src="images/home/demo-s4.png" alt="">
+                            </div>
+                            <div class="item-name txt-center">
+                              <p class="item-tit">Sữa rửa mặt</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button swiper-button-next">
+                      <img src="images/home/icon/ic-angle-right.svg" alt="">
+                    </div>
+                    <div class="swiper-button swiper-button-prev">
+                      <img src="images/home/icon/ic-angle-right.svg" alt="">
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <section class="section-page section-water section-page-spacing">
             <div class="container">
                 <h2 class="section-tit">
                     ĐỐI TÁC ĐƯỢC BẢO HỘ
@@ -101,11 +237,13 @@
                 </p>
                <div class="block-img">
                 <picture>
-                    <img src="images/introduce/section3.png" alt="gmt">
+                    <source media="(max-width: 480px)" srcset="images/introduce/section3-mb.png">
+                        <img src="images/introduce/section3.png" alt="gmt">
                 </picture>
                </div>
             </div>
         </section>
+
         <section class="section-page section-value section-page-spacing">
             <div class="container">
                 <h2 class="section-tit">
@@ -116,25 +254,30 @@
                 </p>
                <div class="block-img">
                 <picture>
-                    <img src="images/introduce/section-water.png" alt="gmt">
+                    <source media="(max-width: 480px)" srcset="images/introduce/section-water-mb.png">
+                        <img src="images/introduce/section-water.png" alt="gmt">
                 </picture>
                </div>
 
                <div class="block-para">
-                    <div class="para1">
+                    <div class="para1 block-none">
                         <picture>
                             <img src="images/introduce/para1.png" alt="">
                         </picture>
                     </div>
-                    <div class="para1">
+                    <div class="para1 block-none">
                         <picture>
                             <img src="images/introduce/para2.png" alt="">
                         </picture>
+                    </div>
+                    <div class="para-mb none-block">
+                        <img src="images/introduce/para-mb.png" alt="gmt">
                     </div>
                </div>
 
             </div>
         </section>
+
         <section class="section-page section-vision">
             <div class="container">
                 <div class="section-gallery-inner">
@@ -149,8 +292,8 @@
                     </div>
                     <div class="news">
                         <ul class="news-list row">
-                            <li class="news-item col-4">
-                                <a href class="item">
+                            <li class="news-item col-4 col-md-12">
+                                <div class="item">
                                     <div class="item-picture">
                                         <picture>
                                             <img src="images/introduce/factory.png" alt="tin tuc">
@@ -164,10 +307,10 @@
                                         Máy móc tiên tiến, hiện đại và công nghệ hàng đầu trên thế giới
                                        </p>
                                     </div>
-                                </a>
+                                </div>
                             </li>
-                            <li class="news-item col-4">
-                                <a href="" class="item">
+                            <li class="news-item col-4 col-md-12">
+                                <div class="item">
                                     <div class="item-picture">
                                         <picture>
                                             <img src="images/introduce/Human.png" alt="tin tuc">
@@ -181,10 +324,10 @@
                                         Đội ngũ công nhân tay nghề cao và tâm huyết với sản phẩm, công việc
                                        </p>
                                     </div>
-                                </a>
+                                </div>
                             </li>
-                            <li class="news-item col-4">
-                                <a href class="item">
+                            <li class="news-item col-4 col-md-12">
+                                <div class="item">
                                     <div class="item-picture">
                                         <picture>
                                             <img src="images/introduce/product.png" alt="tin tuc">
@@ -198,7 +341,7 @@
                                         Chất lượng sản phẩm hàng đầu và nguồn cung cấp sạch
                                        </p>
                                     </div>
-                                </a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -210,7 +353,7 @@
         <div class="container">
             <div class="footer__inner">
                 <div class="row rs-row">
-                    <div class="col-auto col-left">
+                    <div class="col-auto col-left col-md-12">
                         <div class="contact-mail">
                             <p class="mess">Hãy liên hệ với chúng tôi khi cần hỗ trợ</p>
                             <form action="">
@@ -221,7 +364,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-auto col-center">
+                    <div class="col-auto col-center col-md-12">
                         <div class="info-company">
                             <p class="tit">Công Ty Cổ Phần Đầu Tư Thương Mại Dịch Vụ Xuất Nhập Khẩu GMT</p>
                             <ul class="list">
@@ -279,7 +422,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-auto col-right">
+                    <div class="col-auto col-right col-md-12">
                         <div class="logo-footer">
                             <picture>
                                 <img src="images/logo.png" alt="">
@@ -290,6 +433,19 @@
             </div>
         </div>
     </footer>
+    <small>
+        <div class="footer-small">
+            <p class="para-normal">ĐẾN VỚI GMT QUA</p>
+            <div class="social">
+                <picture class="social-item">
+                    <img src="images/icon/fb.png" alt="facebook">
+                </picture>
+                <picture class="social-item">
+                    <img src="images/icon/zalo.png" alt="zalo">
+                </picture>
+            </div>
+        </div>
+    </small>
     <script src="js/function.js"></script>
 </body>
 

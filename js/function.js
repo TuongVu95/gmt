@@ -27,6 +27,34 @@ const pageHome = () => {
   });
 }
 
+const fnTabs = () => {
+  const tabWrapper = $('.js-tab'), tabItem = $('.js-tab-item');
+
+  tabItem.click(function(e){
+    e.preventDefault();
+    tabItem.removeClass('tab-active');
+    $(this).addClass('tab-active');
+  });
+}
+
+const pageIntroduce = () => {
+
+  var swiper = new Swiper(".js-swiper-picture", {
+    slidesPerView: 4,
+    spaceBetween: 32,
+    slidesPerGroup: 4,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
+
 const init = function () {
   pageHome();
+  fnTabs();
 }();

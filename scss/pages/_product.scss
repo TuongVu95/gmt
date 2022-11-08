@@ -2,33 +2,33 @@
     .section-banner {
         @include bg("../images/product/bg-banner.png");
         padding: 12px 0;
-        @include respond-to('md'){
+        @include respond-to("md") {
             padding: 48px 0 80px;
-            .card{
+            .card {
                 padding: 25px;
                 max-width: 340px;
                 margin: auto;
-                &-wrap{
+                &-wrap {
                     text-align: center;
                 }
-                .para-normal{
+                .para-normal {
                     margin-top: 16px;
                 }
-                .desc{
+                .desc {
                     font-weight: 700;
-                    color: #161E61;
+                    color: #161e61;
                 }
-                .sub-desc{
+                .sub-desc {
                     display: block;
                 }
             }
-            .rs-col{
-                &-left{
+            .rs-col {
+                &-left {
                     margin-bottom: 24px;
                 }
             }
-            .img-wrap{
-                picture{
+            .img-wrap {
+                picture {
                     max-width: 340px;
                     margin: auto;
                 }
@@ -93,7 +93,7 @@
                 margin: auto;
             }
         }
-        @include respond-to('md'){
+        @include respond-to("md") {
             .section-tit {
                 max-width: 226px;
                 height: 42px;
@@ -117,7 +117,7 @@
                 &-picture {
                     margin-bottom: 26px;
                 }
-                &-info{
+                &-info {
                     padding-bottom: 16px;
                 }
                 &-name {
@@ -134,16 +134,16 @@
         .section-tit {
             margin-bottom: 16px;
         }
-        .section-head{
+        .section-head {
             position: relative;
         }
-        @include respond-to('md'){
-            .block-line{
+        @include respond-to("md") {
+            .block-line {
                 position: absolute;
-                top:0;
+                top: 0;
                 left: 0;
             }
-            .line-normal{
+            .line-normal {
                 height: 64px;
                 width: 2px;
             }
@@ -177,6 +177,35 @@
         border-radius: 4px;
         * {
             color: $white;
+        }
+    }
+    @include respond-to("md") {
+        box-shadow: inset 0px 0px 0px 1px #E1E3E5;
+        border-radius: 6px;
+        background: $white;
+        padding: 0;
+        white-space: nowrap;
+        overflow-x: auto;
+        &-item{
+            box-shadow: inset 1px 0px 0px #EDEEEF;
+            max-width: calc(100% / 4.2);
+            width: 100%;
+        }
+        &-name {
+            font-size: 14px;
+            line-height: 20px;
+            color: #6A737A;
+        }
+        &-active{
+            background: transparent;
+            box-shadow: none;
+            box-shadow: inset 0px -2px 0px #CB1C22;
+            border-radius: 0;
+            .tab-name{
+                color: #32373D;
+            font-weight: 500;
+
+            }
         }
     }
 }

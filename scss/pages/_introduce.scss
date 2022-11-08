@@ -1,6 +1,23 @@
 .introduce-page {
+    .container {
+        position: relative;
+    }
+    @include respond-to("md") {
+        overflow: hidden;
+        .block-line {
+            left: 10px;
+            .line-normal {
+                height: 32px;
+            }
+        }
+    }
     .section-page {
         padding: 0;
+        @include respond-to("md") {
+            .section-tit {
+                padding-left: 16px;
+            }
+        }
     }
     .section-banner {
         background: url(../images/introduce/banner.png) no-repeat center;
@@ -25,6 +42,37 @@
             line-height: 120%;
             color: #0a2c36;
         }
+        @include respond-to("md") {
+            .card {
+                padding: 32px 16px;
+            }
+            .para-tit {
+                font-size: 48px;
+                line-height: 100%;
+                margin-bottom: 12px;
+            }
+            .para-normal {
+                font-size: 16px;
+                line-height: 140%;
+                max-width: 340px;
+                margin: auto;
+            }
+        }
+    }
+
+    .section-water {
+        @include respond-to("md") {
+            margin-bottom: 48px;
+            .section-tit {
+                padding: 16px 0 16px 16px;
+            }
+            .block-line {
+                top: 16px;
+            }
+            .block-img {
+                margin-top: 32px;
+            }
+        }
     }
     .section-system {
         padding-top: 32px;
@@ -34,6 +82,23 @@
         .block-img,
         .block-para {
             margin-top: 32px;
+        }
+        @include respond-to("md") {
+            padding-top: 48px;
+        }
+    }
+    .section-value {
+        @include respond-to("md") {
+            .block-img {
+                margin-top: 32px;
+            }
+            .block-para {
+                margin-top: 24px;
+            }
+            .para-mb {
+                max-width: 480px;
+                margin: auto;
+            }
         }
     }
     .section-vision {
@@ -54,12 +119,12 @@
         .item {
             display: block;
             text-align: center;
-            background: #FFFFFF;
+            background: #ffffff;
             padding-bottom: 57px;
             &-picture {
                 margin-bottom: 24px;
             }
-            &-info{
+            &-info {
                 padding: 0 22.67px;
             }
             &-name {
@@ -72,8 +137,73 @@
         .news-list {
             margin: 0 -24px;
         }
-        .news-item{
+        .news-item {
             padding: 0 24px;
+        }
+        @include respond-to("md") {
+            padding: 32px 0;
+            .section-head{
+                margin-bottom: 24px;
+            }
+            .section-tit{
+                padding-left: 0;
+            }
+            .block-line {
+                position: relative;
+                left: 0;
+                .line-normal {
+                    width: 80px;
+                    height: 4px;
+                    background: linear-gradient(90deg, #072d94 0%, #54228d 14.29%, #790d80 28.57%, #940071 42.86%, #a7005f 57.14%, #b4004c 71.43%, #bb1239 85.71%, #bc3026 100%);
+                    border-radius: 1000px;
+                }
+            }
+
+            .item {
+                padding-bottom: 11px;
+                border-radius: 6px;
+                &-picture {
+                    margin-bottom: 24px;
+                    overflow: hidden;
+                    img {
+                        border-radius: 6px 6px 0 0;
+                    }
+                }
+                &-info {
+                    padding: 0 8px;
+                    .para-normal {
+                        max-width: 324px;
+                        margin: auto;
+                        color: #334155;
+                    }
+                }
+                &-name {
+                    margin-bottom: 4px;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+            .news {
+                &-list {
+                    margin: 0;
+                    display: block;
+                }
+                &-item {
+                    padding: 0;
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 480px) {
+            .item {
+                &-picture {
+                    picture {
+                        max-height: 180px;
+                    }
+                }
+            }
         }
     }
 }
