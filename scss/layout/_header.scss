@@ -12,8 +12,14 @@ $bg-header: #ee4a91;
         display: block;
         max-width: 152px;
     }
+    .menu-mb-ic{
+        display: none;
+    }
     @include respond-to("md") {
         padding: 8px 10px;
+        .container{
+            padding: 0;
+        }
         .logo {
             max-width: 92px;
         }
