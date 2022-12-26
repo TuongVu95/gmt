@@ -7,6 +7,9 @@
         &:not(:last-child){
             margin-right: 16px;
         }
+        &:last-child{
+            margin-left: auto;
+        }
         @include respond-to('md'){
             &:not(:last-child){
                 display: none;
