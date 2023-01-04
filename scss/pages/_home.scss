@@ -58,9 +58,6 @@
 }
 .section-banner {
     position: relative;
-    .swiper-slide {
-        padding: 180px 0 141px;
-    }
     .slide1 {
         @include bg("../images/home/banner1.webp");
     }
@@ -72,6 +69,10 @@
     }
     .slide4 {
         @include bg("../images/home/banner4.webp");
+    }
+    .swiper-slide {
+        padding: 180px 0 141px;
+        background-position: top center;
     }
     @include respond-to("md") {
         .card {

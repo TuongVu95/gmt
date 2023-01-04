@@ -2,6 +2,13 @@
     .section-banner {
         @include bg("../images/product/bg-banner.png");
         padding: 12px 0;
+        .para-normal {
+            color: #161e61;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+            margin-top: 32px;
+        }
         @include respond-to("md") {
             padding: 48px 0 80px;
             .card {
@@ -13,6 +20,8 @@
                 }
                 .para-normal {
                     margin-top: 16px;
+                    font-size: 16px;
+                    line-height: 24px;
                 }
                 .desc {
                     font-weight: 700;
@@ -158,54 +167,73 @@
     box-shadow: inset 0px 2px 4px rgba(4, 4, 4, 0.15);
     border-radius: 6px;
     padding: 6px 4px;
-    // justify-content: space-between;
+    position: relative;
     &-item {
         padding: 6px 12px;
         flex: 1;
         text-align: center;
         cursor: pointer;
+        position: relative;
+        z-index: 1;
     }
     &-name {
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
         color: #6a737a;
+        transition: all 0.9s;
     }
     &-active {
-        background: #ae064f;
-        box-shadow: 0px 1px 4px rgba(10, 10, 10, 0.15);
-        border-radius: 4px;
+        // background: #ae064f;
+        // box-shadow: 0px 1px 4px rgba(10, 10, 10, 0.15);
+        // border-radius: 4px;
         * {
             color: $white;
         }
     }
     @include respond-to("md") {
-        box-shadow: inset 0px 0px 0px 1px #E1E3E5;
+        box-shadow: inset 0px 0px 0px 1px #e1e3e5;
         border-radius: 6px;
         background: $white;
         padding: 0;
         white-space: nowrap;
         overflow-x: auto;
-        &-item{
-            box-shadow: inset 1px 0px 0px #EDEEEF;
+        &-item {
+            box-shadow: inset 1px 0px 0px #edeeef;
             max-width: calc(100% / 4.2);
             width: 100%;
         }
         &-name {
             font-size: 14px;
             line-height: 20px;
-            color: #6A737A;
+            color: #6a737a;
         }
-        &-active{
+        &-active {
             background: transparent;
             box-shadow: none;
-            box-shadow: inset 0px -2px 0px #CB1C22;
+            box-shadow: inset 0px -2px 0px #cb1c22;
             border-radius: 0;
-            .tab-name{
-                color: #32373D;
-            font-weight: 500;
-
+            .tab-name {
+                color: #32373d;
+                font-weight: 500;
             }
         }
+    }
+}
+.selector {
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    z-index: 1;
+    background: #ae064f;
+    box-shadow: 0px 1px 4px rgba(10, 10, 10, 0.15);
+    border-radius: 4px;
+    transition-duration: 0.9s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
+    @include respond-to("md") {
+        display: none;
     }
 }
